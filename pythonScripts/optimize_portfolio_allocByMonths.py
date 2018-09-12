@@ -53,7 +53,7 @@ def create_date_range(currentMonth, monthRange):
     return sd, ed
 
 def compute_cr(portfolio, daily, rfr):
-    c,a,r,s=pu.compute_portfolio_stats(portfolio, daily, riskFreeRate)
+    c,a,r,s=pu.compute_portfolio_stats(portfolio, daily, rfr)
     return c
 
 """
@@ -82,9 +82,11 @@ def compute_returns_from_allocs(allocDf):
 def test_run():
     #opts = ['risk','cumulative','sharpe']
     opt = 'cumulative'
-    syms=['GOOG','AAPL','GLD','XOM']
+    #syms=['GOOG','AAPL','GLD','XOM']
+    syms=['$DJI','$SPX','GLD']
     monthsList=[(-3,-1), (-14, -12)]
-    dates = pd.date_range('2002-01-01', '2012-08-31', freq='BM') 
+    #dates = pd.date_range('2002-01-01', '2012-08-31', freq='BM') 
+    dates = pd.date_range('2006-01-01', '2012-08-31', freq='BM') 
     allocsByMonth=[]
     for curMon in dates:
         allocsList=[]
