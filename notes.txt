@@ -1,0 +1,39 @@
+sharpe ratio, higher is better.  
+S = E[ R - Rf]/sigma
+  = E[ R - Rf]/sqrt(R - Rf)
+Rf is reference return, but it is typically ignored.
+metric = k * mean(daily_rets)/stdev(daily_rets)
+
+k is sqrt(250) for daily returns 250 days in trading year
+daily_rets = daily_val[i]/daily_val[i-1] - 1
+
+What is the sharpe ratio for a fund that has 
+mean(daily return) = 0.005 and 
+standard deviation (daily) = 0.04, 
+assume 250 trading days in the year.
+
+ = sqrt(250) * .005/.04
+ = 15.8114 * .005/.04 = 1.976
+
+to make an order:
+symbol, buy or sell, market or limit, numshares, price (if limit)
+advice is to use limit orders
+The spread is the gap between what people are willing to pay and lowest asking price
+
+news affects stock prices
+discount rate vs. dividends.
+ways to value a company
+value = assets + future value
+
+future value = div * 1/(1-discount rate)
+assets = total assets - intangible assets - liabilities
+market says value is market cap = # shares * price
+
+CAPM capital assets pricing model
+most important factor in a stock price is 'what is the market doing'...
+is is stock, i.e. stock i
+ri(t) = betai * rm(t) + alphai
+r is return, rm is market return, beta is scale factor for market return
+alpha is residual
+E[alpha] = 0
+
